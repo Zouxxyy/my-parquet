@@ -5,7 +5,7 @@
 
 namespace zouxxyy::parquet::common {
 
-void printVector(std::vector<char>& v, int start, int len) {
+void printVector(const char*& v, int start, int len) {
   int end = start + len;
   for (int i = start; i < end; i++) {
     std::cout << v[i];

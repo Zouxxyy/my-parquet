@@ -1,11 +1,12 @@
 #pragma once
 
+#include <unordered_set>
 #include "thrift/ParquetTypes.h"
 
 namespace zouxxyy::parquet::reader {
 
-std::unique_ptr<thrift::FileMetaData>
-parseFileMetadata(const std::vector<char>& bytes, size_t start, size_t len);
-
-void readParquet(std::string& fileName);
+void readParquet(
+    std::string& fileName,
+    const std::optional<std::unordered_set<std::string>>& project =
+        std::nullopt);
 } // namespace zouxxyy::parquet::reader

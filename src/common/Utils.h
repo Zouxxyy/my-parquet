@@ -9,7 +9,7 @@
 
 namespace zouxxyy::parquet::common {
 
-void printVector(std::vector<char>& v, int start, int len);
+void printVector(const char*& v, int start, int len);
 
 int readInt(const std::vector<char>& buffer, size_t startPos);
 
